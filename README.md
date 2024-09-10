@@ -1,17 +1,17 @@
-### API + Cassandra
+# API + Cassandra
 
 ## Script que foi usado para criar o banco: 
 
- # Criando a kayspace
+ ### Criando a kayspace
  cqlsh:pop_divas> CREATE KEYSPACE mulheres_tech WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
- # Comando para "usar" a keyspace
+ ### Comando para "usar" a keyspace
  cqlsh:pop_divas> USE mulheres_tech;
 
- # Criando tabela dentro da keyspace
+ ### Criando tabela dentro da keyspace
  cqlsh:mulheres_tech> create table profissionais (id UUID primary key, name TEXT, birth INT, country TEXT, area TEXT, contribuition TEXT); 
 
- # Inserindo dados dentro da tabela
+ ### Inserindo dados dentro da tabela
  cqlsh:mulheres_tech> INSERT INTO profissionais (id, name, birth, country, area, contribuition) 
                       VALUES (uuid(), 'Ada Lovelace', 1815, 'Reino Unido', 'Matemática, Programação', 'Primeira programadora de computadores' );
 
